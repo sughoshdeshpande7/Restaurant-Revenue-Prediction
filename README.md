@@ -87,7 +87,7 @@ The dataset is from the [Restaurant Revenue Prediction](https://www.kaggle.com/c
 
 ### Submission:
 - Generated final predictions for the test set.
-- Submission CSVs for all models stored in `data/` for Kaggle evaluation.
+- Submission CSVs for all models stored in `submissions/` for Kaggle evaluation.
 
 ---
 
@@ -112,39 +112,48 @@ The dataset is from the [Restaurant Revenue Prediction](https://www.kaggle.com/c
 ---
 
 ## 📂 Files and Directories
-
-| **File/Directory**         | **Description**                                      |
-|-----------------------------|------------------------------------------------------|
-| `data/train.csv`            | Training dataset with restaurant data and revenue.   |
-| `data/test.csv`             | Test dataset for generating predictions.            |
-| `data/xgboost_submission.csv` | Predictions from the XGBoost model.              |
-| `notebooks/EDA.ipynb`       | Exploratory data analysis and initial insights.      |
-| `src/preprocess.py`         | Preprocessing and feature engineering code.          |
-| `src/train_models.py`       | Code to train and evaluate individual models.        |
-| `src/stacking.py`           | Code to implement stacking for ensemble learning.    |
-
+```
+Restaurant-Revenue-Prediction/
+├── data/
+│   ├── train.csv                    # Training dataset
+│   ├── test.csv                     # Test dataset
+├── notebook/
+│   ├── Restaurant_Revenue_Prediction.ipynb # Single Colab notebook for the entire project
+├── submissions/
+│   ├── kaggle_scores.png                                   # Image of Kaggle Score for all models
+│   ├── stacked_model_selected_features_submission.csv      # Predictions from stacked model after feature selection
+│   ├── submission_cat.csv                                  # Predictions from CatBoost model
+│   ├── submission_dt.csv                                   # Predictions from Decision Tree model
+│   ├── submission_elastic.csv                              # Predictions from ElasticNet model
+│   ├── submission_gb.csv                                   # Predictions from Gradient Boosting model
+│   ├── submission_lgb.csv                                  # Predictions from Lightgbm model
+│   ├── submission_mlp.csv                                  # Predictions from MLP model
+│   ├── submission_cat.csv                                  # Predictions from Random Forest model
+│   ├── submission_stacked.csv                              # Predictions from stacked model
+│   ├── tuned_stacked_model_submission.csv                  # Predictions from tuned stacked model
+│   ├── xgboost_selected_features_submission.csv            # Predictions from xgboost modelafter feature selection
+├── results/
+│   ├── predictions.csv              # Submission file
+├── LICENSE                          # License for the project
+├── README.md                        # Main documentation
+├── requirements.txt                 # List of dependencies
+```
 
 ---
 
 ## 🚧 Limitations
 
-### Limited Feature Set:
-- The dataset primarily includes operational and contextual data, which may not capture all factors influencing restaurant revenue (e.g., economic trends, competition, or customer preferences).
+- Limited Feature Set: The dataset primarily includes operational and contextual data, which may not capture all factors influencing restaurant revenue (e.g., economic trends, competition, or customer preferences).
 
-### Data Quality Issues:
-- Potential data inconsistencies such as missing values, noisy categorical labels, and limited variability in features may impact the model's ability to generalize.
+- Data Quality Issues: Potential data inconsistencies such as missing values, noisy categorical labels, and limited variability in features may impact the model's ability to generalize.
 
-### Assumptions in Feature Engineering:
-- Engineered features like `Days Since Opening` assume a static snapshot, ignoring potential seasonal effects or trends over time.
+- Assumptions in Feature Engineering: Engineered features like `Days Since Opening` assume a static snapshot, ignoring potential seasonal effects or trends over time.
 
-### Overfitting Risks:
-- Some models, especially ensemble methods like XGBoost and LightGBM, are prone to overfitting when hyperparameters are not carefully tuned.
+- Overfitting Risks: Some models, especially ensemble methods like XGBoost and LightGBM, are prone to overfitting when hyperparameters are not carefully tuned.
 
-### Evaluation Metrics:
-- The project primarily focuses on RMSE. Other business-relevant metrics (e.g., revenue percent error) may provide more actionable insights.
+- Evaluation Metrics: The project primarily focuses on RMSE. Other business-relevant metrics (e.g., revenue percent error) may provide more actionable insights.
 
-### Test Dataset Labels Not Available:
-- Without actual revenue values for the test set, we rely solely on leaderboard scores, which limits comprehensive evaluation of model performance.
+- Test Dataset Labels Not Available: Without actual revenue values for the test set, we rely solely on leaderboard scores, which limits comprehensive evaluation of model performance.
 
 ---
 
