@@ -9,6 +9,17 @@ A machine learning solution for predicting restaurant revenues using advanced re
 </p>
 
 ---
+## 📚 Table of Contents
+
+1. [Overview](#-overview)
+2. [Key Features](#-key-features)
+3. [Dataset](#-dataset)
+4. [Project Workflow](#-project-workflow)
+5. [Files and Directories](#-files-and-directories)
+6. [Limitations](#-limitations)
+7. [Future Work](#-future-work)
+
+---
 
 ## 🌟 Overview
 
@@ -17,6 +28,12 @@ Predicting restaurant revenue is essential for optimizing business strategies an
 This project tackles challenges like noisy features, categorical data encoding, and feature importance ranking, while implementing advanced techniques like stacked model ensembling to improve predictive performance. All preprocessing, modeling, and evaluation were performed locally using Google Colab.
 
 The final submission achieved a public leaderboard RMSE of 1.98M using CatBoost.
+
+Key Highlights:
+📊 Preprocessing: Handled missing data, categorical encoding, and feature engineering.
+🌟 Modeling: Trained XGBoost, LightGBM, Gradient Boosting, and CatBoost models.
+🤖 Stacking: Combined top-performing models for improved performance.
+🛠️ Evaluation: Visualized feature importance and optimized RMSE scores.
 
 ---
 
