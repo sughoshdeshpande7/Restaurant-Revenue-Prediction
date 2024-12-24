@@ -126,17 +126,55 @@ The dataset is from the [Restaurant Revenue Prediction](https://www.kaggle.com/c
 
 ---
 
-## 🧰 Dependencies
+## 🚧 Limitations
 
-- Python 3.8+
-- pandas, numpy
-- xgboost, lightgbm, catboost
-- scikit-learn
-- matplotlib, seaborn
-- mlxtend
+### Limited Feature Set:
+- The dataset primarily includes operational and contextual data, which may not capture all factors influencing restaurant revenue (e.g., economic trends, competition, or customer preferences).
+
+### Data Quality Issues:
+- Potential data inconsistencies such as missing values, noisy categorical labels, and limited variability in features may impact the model's ability to generalize.
+
+### Assumptions in Feature Engineering:
+- Engineered features like `Days Since Opening` assume a static snapshot, ignoring potential seasonal effects or trends over time.
+
+### Overfitting Risks:
+- Some models, especially ensemble methods like XGBoost and LightGBM, are prone to overfitting when hyperparameters are not carefully tuned.
+
+### Evaluation Metrics:
+- The project primarily focuses on RMSE. Other business-relevant metrics (e.g., revenue percent error) may provide more actionable insights.
+
+### Test Dataset Labels Not Available:
+- Without actual revenue values for the test set, we rely solely on leaderboard scores, which limits comprehensive evaluation of model performance.
 
 ---
 
-## 📜 License
+## 🚀 Future Work
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+### Incorporate External Data:
+- Augment the dataset with external factors such as:
+  - **Economic Indicators**: GDP, inflation, and disposable income levels.
+  - **Geographic Data**: Restaurant proximity to competitors or population density.
+  - **Weather Data**: Climate factors that could affect foot traffic.
+
+### Time Series Modeling:
+- Transition from static modeling to time series forecasting to capture seasonal patterns, growth trends, and temporal dependencies.
+
+### Advanced Feature Engineering:
+- Create interaction features or latent embeddings to capture complex relationships between variables.
+- Use techniques like **Principal Component Analysis (PCA)** or **Autoencoders** for dimensionality reduction.
+
+### Explore Other Evaluation Metrics:
+- Introduce metrics like **Mean Absolute Percentage Error (MAPE)** or **Revenue Deviation** to better align evaluation with real-world business goals.
+
+### Hyperparameter Optimization:
+- Perform an extensive search (e.g., **Bayesian Optimization**) for optimal hyperparameters to further improve model performance.
+
+### Model Interpretability:
+- Use tools like **SHAP** or **LIME** to explain model predictions and identify key drivers of revenue.
+
+### Deploy a Real-World Application:
+- Build a web-based dashboard or API to predict restaurant revenues dynamically and visualize key insights.
+
+### Ensemble with Deep Learning:
+- Integrate neural networks or pre-trained embeddings (e.g., for location data) into the stacking model for better generalization.
+
