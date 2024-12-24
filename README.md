@@ -56,6 +56,8 @@ The dataset contains historical revenue data for restaurants, along with feature
 
 The dataset was split into training and test sets, with the goal of predicting **Revenue** for unseen test data.
 
+The dataset is from the [Restaurant Revenue Prediction](https://www.kaggle.com/c/restaurant-revenue-prediction).
+
 ---
 
 ## 🛠️ Project Workflow
@@ -120,6 +122,7 @@ The dataset was split into training and test sets, with the goal of predicting *
 | `src/preprocess.py`         | Preprocessing and feature engineering code.          |
 | `src/train_models.py`       | Code to train and evaluate individual models.        |
 | `src/stacking.py`           | Code to implement stacking for ensemble learning.    |
+
 
 ---
 
